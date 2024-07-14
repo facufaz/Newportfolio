@@ -2,6 +2,7 @@ import React from 'react'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import ShimerButton from './ui/ShimerButton'
+import { FaLocationArrow } from 'react-icons/fa'
 
 const Hero = () => {
   return (
@@ -25,14 +26,17 @@ const Hero = () => {
 
        <TextGenerateEffect
        className='text-center text-[40px] md:text-5xl lg:6xl'
-       words="Transforming Concepts into Seamless Experiences"
+       words="Transforming Concepts into Seamless User Experiences"
        />
     
       <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>Hi, I&apos;m Facundo, a Next.js Developer Based in Argentina </p>
 
       <a href="#about">
         <ShimerButton
-        title='Show my Work'/>
+        title='Show my Work'
+        icon={<FaLocationArrow/>}
+        position='right'
+        />
       </a>
       </div>
       
