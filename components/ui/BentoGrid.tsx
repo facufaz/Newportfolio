@@ -35,11 +35,11 @@ export const BentoGridItem = ({
   description?: string | React.ReactNode;
   header?: React.ReactNode;
   icon?: React.ReactNode;
-  id:number;
-  img?:string,
-  imgClassName?:string,
-  titleClassName?:string,
-  spareImg?:string,
+  id: number;
+  img?: string;
+  imgClassName?: string;
+  titleClassName?: string;
+  spareImg?: string;
 }) => {
   return (
     <div
@@ -48,7 +48,7 @@ export const BentoGridItem = ({
         className
       )}
       style={{
-             background: "rgb(4,7,29)",
+        background: "rgb(4,7,29)",
         backgroundColor:
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
       }}
@@ -59,12 +59,15 @@ export const BentoGridItem = ({
             <img
               src={img}
               alt={img}
-              className={cn(imgClassName,
-                "object-cover, object-center")}
+              className={cn(imgClassName, "object-cover, object-center")}
             />
           )}
         </div>
-        <div className={`absolute right-0 -bottom-5 ${id === 5 && 'w-full opacity-80'}`}>
+        <div
+          className={`absolute right-0 -bottom-5 ${
+            id === 5 && "w-full opacity-80"
+          }`}
+        >
           {spareImg && (
             <img
               src={spareImg}
@@ -79,10 +82,12 @@ export const BentoGridItem = ({
           </BackgroundGradientAnimation>
         )}
 
-        <div className={cn(
-          titleClassName,'group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10'
-        )}>
-
+        <div
+          className={cn(
+            titleClassName,
+            "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
+          )}
+        >
           <div className="font-sans font-extralight text-[#c1c2d3] text-sm  md:text-xs lg:text-base z-10">
             {description}
           </div>
@@ -90,12 +95,8 @@ export const BentoGridItem = ({
           <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-10">
             {title}
           </div>
-
-        </div>
-        
-   
-        
         </div>
       </div>
+    </div>
   );
 };
